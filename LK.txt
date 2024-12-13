@@ -1,0 +1,2568 @@
+//----- Variables -----------------------------------------------------------------------------------------------------
+
+alpha = 0
+attacked? = false
+bestPv = 0917 1321 6353 0722 
+beta = 22
+break? = 1
+change = 406
+childPv = 1321 6353 0722 
+curr = b8 4 6 10 12 6 4 8 2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 7 3 5 9 11 5 3 7truetruetruetrue
+data = 257
+depthIter = 5
+flag = 2
+hash = 427223808
+i = 64
+i3 = 35
+idx = 0
+idx2 = 46
+idx3 = 17
+idx4 = 25
+idxhash = 64
+len = 0
+len2 = 0
+line idx = 46
+LOG? = 0
+move = 43620762753
+moves = 0917 1321 0217 1422 1329 1127 1220 1228 1632 0925 1018 0722 0219 1119 0724 1026 1531 1523 1430 1624
+old castle hash = -2177571826
+old overwrittings = 0
+old turn hash = 546680546
+old writing = 0
+piece = 3
+pos = 0
+q A = 3
+qBest = -111
+q childPV = 1656 0816 
+q eval = -37
+q moveidx = 5
+q moves = 5041 5616 5741 5841
+q nodes = 78188
+q PV = 5616 1656 0816 
+q score = -111
+score = 22
+START LOG = 9113.6732409144
+tmp = 0
+tmp2 = 19
+tmp3 = 0
+tmp4 = 0
+tmp5 = 0
+tmp6 = 0
+tmp7 = 2
+tmp9 = 27
+tmp10 = 1
+tmp11 = 1725
+TT.flag = 2
+TT.value = 0
+value = 22
+xtmp = 6
+ytmp = 6
+
+
+//----- Lists ---------------------------------------------------------------------------------------------------------
+
+changes for eval = { 
+    6671
+    6391
+    881
+    6760
+    6351
+    503
+    5879
+    7119
+    6663
+    8015
+    5887
+    8823
+    8374
+    1527
+    7502
+    2255
+    8329
+    1526
+    7523
+    2254
+    6656
+    1384
+    7547
+    3939
+    8347
+    4809
+    4176
+    1993
+    8323
+    1499
+    4221
+    2000
+    3346
+    1123
+    868
+    1755
+    3329
+    274
+    880
+    104
+    1675
+    155
+    883
+    99
+    1672
+    144
+    3346
+    257
+}
+changes for hash = { 
+    6671
+    6391
+    881
+    6760
+    6351
+    503
+    5879
+    7119
+    6663
+    8015
+    5887
+    8823
+    8374
+    1527
+    7502
+    2255
+    8329
+    1526
+    7523
+    2254
+    6656
+    1384
+    7547
+    3939
+    8347
+    4809
+    4176
+    1993
+    8323
+    1499
+    4221
+    2000
+    3346
+    1123
+    868
+    1755
+    3329
+    274
+    880
+    104
+    1675
+    155
+    883
+    99
+    1672
+    144
+    3346
+    257
+}
+loaded = { }
+moves PV = { 
+    b8c6
+    g1f3
+    g8f6
+    d2d4
+    c6d4
+    f3d4
+    f6e4
+}
+pieces = { 
+    Pw
+    Pb
+    Nw
+    Nb
+    Bw
+    Bb
+    Rw
+    Rb
+    Qw
+    Qb
+    Kw
+    Kb
+}
+pointers = { 
+    57
+    58
+    59
+    60
+    61
+    62
+    63
+    64
+    49
+    50
+    51
+    52
+    53
+    54
+    55
+    56
+    41
+    42
+    43
+    44
+    45
+    46
+    47
+    48
+    33
+    34
+    35
+    36
+    37
+    38
+    39
+    40
+    25
+    26
+    27
+    28
+    29
+    30
+    31
+    32
+    17
+    18
+    19
+    20
+    21
+    22
+    23
+    24
+    9
+    10
+    11
+    12
+    13
+    14
+    15
+    16
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+}
+tmp = { 
+    82
+    82
+    82
+    82
+    82
+    82
+    82
+    82
+    180
+    216
+    143
+    177
+    150
+    208
+    116
+    71
+    76
+    89
+    108
+    113
+    147
+    138
+    107
+    62
+    68
+    95
+    88
+    103
+    105
+    94
+    99
+    59
+    55
+    80
+    77
+    94
+    99
+    88
+    92
+    57
+    56
+    78
+    78
+    72
+    85
+    85
+    115
+    70
+    47
+    81
+    62
+    59
+    67
+    106
+    120
+    60
+    82
+    82
+    82
+    82
+    82
+    82
+    82
+    82
+    170
+    248
+    303
+    288
+    398
+    240
+    322
+    230
+    264
+    296
+    409
+    373
+    360
+    399
+    344
+    320
+    290
+    397
+    374
+    402
+    421
+    466
+    410
+    381
+    328
+    354
+    356
+    390
+    374
+    406
+    355
+    359
+    324
+    341
+    353
+    350
+    365
+    356
+    358
+    329
+    314
+    328
+    349
+    347
+    356
+    354
+    362
+    321
+    308
+    284
+    325
+    334
+    336
+    355
+    323
+    318
+    232
+    316
+    279
+    304
+    320
+    309
+    318
+    314
+    336
+    369
+    283
+    328
+    340
+    323
+    372
+    357
+    339
+    381
+    347
+    352
+    395
+    424
+    383
+    318
+    349
+    402
+    408
+    405
+    400
+    415
+    402
+    363
+    361
+    370
+    384
+    415
+    402
+    402
+    372
+    363
+    359
+    378
+    378
+    391
+    399
+    377
+    375
+    369
+    365
+    380
+    380
+    380
+    379
+    392
+    383
+    375
+    369
+    380
+    381
+    365
+    372
+    386
+    398
+    366
+    332
+    362
+    351
+    344
+    352
+    353
+    326
+    344
+    509
+    519
+    509
+    528
+    540
+    486
+    508
+    520
+    504
+    509
+    535
+    539
+    557
+    544
+    503
+    521
+    472
+    496
+    503
+    513
+    494
+    522
+    538
+    493
+    453
+    466
+    484
+    503
+    501
+    512
+    469
+    457
+    441
+    451
+    465
+    476
+    486
+    470
+    483
+    454
+    432
+    452
+    461
+    460
+    480
+    477
+    472
+    444
+    433
+    461
+    457
+    468
+    476
+    488
+    471
+    406
+    458
+    464
+    478
+    494
+    493
+    484
+    440
+    451
+    997
+    1025
+    1054
+    1037
+    1084
+    1069
+    1068
+    1070
+    1001
+    986
+    1020
+    1026
+    1009
+    1082
+    1053
+    1079
+    1012
+    1008
+    1032
+    1033
+    1054
+    1081
+    1072
+    1082
+    998
+    998
+    1009
+    1009
+    1024
+    1042
+    1023
+    1026
+    1016
+    999
+    1016
+    1015
+    1023
+    1021
+    1028
+    1022
+    1011
+    1027
+    1014
+    1023
+    1020
+    1027
+    1039
+    1030
+    990
+    1017
+    1036
+    1027
+    1033
+    1040
+    1022
+    1026
+    1024
+    1007
+    1016
+    1035
+    1010
+    1000
+    994
+    975
+    -65
+    23
+    16
+    -15
+    -56
+    -34
+    2
+    13
+    29
+    -1
+    -20
+    -7
+    -8
+    -4
+    -38
+    -29
+    -9
+    24
+    2
+    -16
+    -20
+    6
+    22
+    -22
+    -17
+    -20
+    -12
+    -27
+    -30
+    -25
+    -14
+    -36
+    -49
+    -1
+    -27
+    -39
+    -46
+    -44
+    -33
+    -51
+    -14
+    -14
+    -22
+    -46
+    -44
+    -30
+    -15
+    -27
+    1
+    7
+    -8
+    -64
+    -43
+    -16
+    9
+    8
+    -15
+    36
+    12
+    -54
+    8
+    -28
+    24
+    14
+}
+TMPtoMODIFY = { 
+    0
+    0
+    0
+    0
+    53
+    37
+    02
+    19
+}
+vals_smootheds = { 
+    82
+    337
+    365
+    477
+    1025
+    0
+}
+virtual board = { 
+    8
+    0
+    6
+    10
+    12
+    6
+    4
+    8
+    2
+    2
+    2
+    2
+    2
+    2
+    2
+    2
+    0
+    0
+    4
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    1
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    0
+    1
+    1
+    1
+    1
+    0
+    1
+    1
+    1
+    7
+    3
+    5
+    9
+    11
+    5
+    3
+    7
+}
+
+
+//----- Green flag events ---------------------------------------------------------------------------------------------
+
+WhenGreenFlagClicked()
+{
+    List.Hide(LOG);
+    LOG? = 0;
+}
+
+
+//----- Key pressed events --------------------------------------------------------------------------------------------
+
+WhenKeyPressed(l)
+{
+    LOG? = (1 - LOG?);
+    If (LOG? == 1)
+    {
+        List.Show(LOG);
+    }
+    Else
+    {
+        List.Hide(LOG);
+    }
+}
+
+
+//----- Broadcast received events -------------------------------------------------------------------------------------
+
+WhenBroadcastReceived(AI to play)
+{
+    START LOG = Sensing.DaysSince2000();
+    old writing = Used entries;
+    old overwrittings = Overwritings;
+    Call position to virtual board;
+    Call Evaluate PST;
+    Call get hash;
+    nodes = 0;
+    q nodes = 0;
+    nps = Sensing.DaysSince2000();
+    Used TT = 0;
+    Call LOG("start search")("info");
+    depthIter = 0;
+    break? = 0;
+    PVactual = "";
+    Call go;
+    Call add current;
+    Call make_move_int(Operator.Join(Operator.LetterOf(PVactual, 1), Operator.LetterOf(PVactual, 2)))(Operator.Join(Operator.LetterOf(PVactual, 3), Operator.LetterOf(PVactual, 4)));
+    List.Add(moves history, move);
+    nps = Operator.Round(((nodes / ((Sensing.DaysSince2000() - nps) * 86400)) / 1000));
+    List.DeleteAll(moves PV);
+    i3 = 0;
+    Repeat (ceiling((Variable.Length(PVactual) / 5)))
+    {
+        List.Add(moves PV, Operator.Join(pointers a-8[(Operator.Join(Operator.LetterOf(PVactual, (i3 + 1)), Operator.LetterOf(PVactual, (i3 + 2))) + )], pointers a-8[(Operator.Join(Operator.LetterOf(PVactual, (i3 + 3)), Operator.LetterOf(PVactual, (i3 + 4))) + )]));
+        i3 += 5;
+    }
+    PVactual = moves PV;
+    Call LOG(nodes)("nodes");
+    Call LOG(nps)("knps");
+    Call LOG(q nodes)("quicence nodes");
+    Call LOG(Operator.Round(((q nodes / nodes) * 100)))("percentage of quiescence nodes");
+    Call LOG(Overwritings)("# of overwritings (all)");
+    Call LOG((Overwritings - old overwrittings))("# of overwritings (this iteration)");
+    Call LOG((Used entries + Overwritings))("# of print in the TT (all)");
+    Call LOG(((Used entries - old writing) + (Overwritings - old overwrittings)))("# of print in the TT (this iteration)");
+    Call LOG(Operator.Join(Operator.Round(((Used entries / TT size) * 100)), "%"))("TT used percentage (all)");
+    Call LOG(Used TT)("# of access to TT (this iteration)");
+    Call LOG(Operator.Join(Operator.Join(Operator.LetterOf(PVactual, 1), Operator.LetterOf(PVactual, 2)), Operator.Join(Operator.LetterOf(PVactual, 3), Operator.LetterOf(PVactual, 4))))("best Move");
+    Call LOG(PVactual)("best PV");
+    List.DeleteAll(moves);
+    Call virtual board to position;
+}
+
+WhenBroadcastReceived(generate_moves)
+{
+    Call generate moves(Sensing.Of(idx1, UI//render))(( Or ))(((turn == "w") + ))("");
+}
+
+WhenBroadcastReceived(init)
+{
+    List.DeleteAll(TMPtoMODIFY);
+    List.DeleteAll(moves history);
+    List.DeleteAll(changes for eval);
+    Call init lists;
+    Call init TT((200000 + (is compiled? * 1300000)));
+}
+
+WhenBroadcastReceived(init 2)
+{
+    List.DeleteAll(REPimpl);
+}
+
+WhenBroadcastReceived(init 2)
+{
+    Call smooth tables(0);
+    Call Evaluate PST;
+}
+
+WhenBroadcastReceived(load into virtual board)
+{
+    Call position to virtual board;
+    List.Add(TMPtoMODIFY, ((o-o b == 0) * 1));
+    List.Add(TMPtoMODIFY, ((o-o w == 0) * 57));
+    List.Add(TMPtoMODIFY, ((o-o-o b == 0) * 8));
+    List.Add(TMPtoMODIFY, ((o-o-o w == 0) * 64));
+}
+
+WhenBroadcastReceived(UI make move)
+{
+    Call position to virtual board;
+    Call add current;
+    Call make_move_int(Sensing.Of(idx1, UI//render))(Sensing.Of(idx2, UI//render));
+    List.Add(moves history, move);
+    Call virtual board to position;
+}
+
+WhenBroadcastReceived(UI undo)
+{
+    Call position to virtual board;
+    Call unmake move(moves history[List.Length(moves history)]);
+    Call del current;
+    List.DeleteItem(moves history, List.Length(moves history));
+    Call virtual board to position;
+}
+
+
+//----- Custom blocks -------------------------------------------------------------------------------------------------
+
+Define add change(string idx) piece old(string old) new piece(string new) spec?(string specs) (warp=true)
+{
+    data = (((idx - 1) + (old * 64)) + (832 * new));
+    If (Not ((specs == 1)))
+    {
+        List.Add(changes for eval, data);
+    }
+    List.Add(changes for hash, data);
+}
+
+Define add current (warp=true)
+{
+    curr = Operator.Join(Operator.Join(turn, virtual board), Operator.Join(Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 8)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 64))))), Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 1)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 57)))))));
+    pos = List.IndexOf(REPimpl, curr);
+    If (pos < 1)
+    {
+        List.Add(REPimpl, curr);
+        List.Add(REPimpl, 1);
+    }
+    Else
+    {
+        List.ReplaceItem(REPimpl, (pos + 1), (REPimpl[(pos + 1)] + 1));
+    }
+}
+
+Define add move(string idx)(string idx2)(bool add to attack table? ) (warp=true)
+{
+    List.Add(moves, Operator.Join(Operator.Join(Operator.LetterOf(0, (2 > Variable.Length(idx))), idx), Operator.Join(Operator.LetterOf(0, (2 > Variable.Length(idx2))), idx2)));
+}
+
+Define attacked piece(string idx)(string piece) (warp=true)
+{
+    attacked? = "false";
+    len2 = List.Length(moves);
+    Call generate moves(idx)(( Or ))((piece % 2))((8 - (piece % 2)));
+    Repeat ((List.Length(moves) - len2))
+    {
+        idx2 = moves[List.Length(moves)];
+        idx2 = (Operator.Join(Operator.LetterOf(idx2, 3), Operator.LetterOf(idx2, 4)) + );
+        If ((virtual board[idx2] == (7 + (piece % 2))) Or (virtual board[idx2] == (9 + (piece % 2))))
+        {
+            attacked? = "true";
+            Repeat ((List.Length(moves) - len2))
+            {
+                List.DeleteItem(moves, List.Length(moves));
+            }
+            Stop(this script);
+        }
+        List.DeleteItem(moves, List.Length(moves));
+    }
+    len2 = List.Length(moves);
+    Call generate moves(idx)(( Or ))((piece % 2))((6 - (piece % 2)));
+    Repeat ((List.Length(moves) - len2))
+    {
+        idx2 = moves[List.Length(moves)];
+        idx2 = (Operator.Join(Operator.LetterOf(idx2, 3), Operator.LetterOf(idx2, 4)) + );
+        If ((virtual board[idx2] == (5 + (piece % 2))) Or (virtual board[idx2] == (9 + (piece % 2))))
+        {
+            attacked? = "true";
+            Repeat ((List.Length(moves) - len2))
+            {
+                List.DeleteItem(moves, List.Length(moves));
+            }
+            Stop(this script);
+        }
+        List.DeleteItem(moves, List.Length(moves));
+    }
+    len2 = List.Length(moves);
+    Call generate moves(idx)(( Or ))((piece % 2))((4 - (piece % 2)));
+    Repeat ((List.Length(moves) - len2))
+    {
+        idx2 = moves[List.Length(moves)];
+        idx2 = (Operator.Join(Operator.LetterOf(idx2, 3), Operator.LetterOf(idx2, 4)) + );
+        If (virtual board[idx2] == (3 + (piece % 2)))
+        {
+            attacked? = "true";
+            Repeat ((List.Length(moves) - len2))
+            {
+                List.DeleteItem(moves, List.Length(moves));
+            }
+            Stop(this script);
+        }
+        List.DeleteItem(moves, List.Length(moves));
+    }
+    If ((piece % 2) == 0)
+    {
+        If (((idx - 1) % 8) < 7)
+        {
+            If (virtual board[(idx + 9)] == 1)
+            {
+                attacked? = "true";
+                Stop(this script);
+            }
+        }
+        If (((idx - 1) % 8) > 0)
+        {
+            If (virtual board[(idx + 7)] == 1)
+            {
+                attacked? = "true";
+                Stop(this script);
+            }
+        }
+    }
+    Else
+    {
+        If (((idx - 1) % 8) < 7)
+        {
+            If (virtual board[(idx - 7)] == 2)
+            {
+                attacked? = "true";
+                Stop(this script);
+            }
+        }
+        If (((idx - 1) % 8) > 0)
+        {
+            If (virtual board[(idx - 9)] == 2)
+            {
+                attacked? = "true";
+                Stop(this script);
+            }
+        }
+    }
+}
+
+Define check and add move(string idx)(string offx)(string offy)(bool only capture?)(bool only not capture?)(bool promotions?) (warp=true)
+{
+    ytmp = ceiling((idx / 8));
+    xtmp = (((idx - 1) % 8) + 1);
+    xtmp += offx;
+    ytmp += offy;
+    If ((xtmp < 1) Or (ytmp < 1))
+    {
+        Stop(this script);
+    }
+    If ((xtmp > 8) Or (ytmp > 8))
+    {
+        Stop(this script);
+    }
+    line idx = ((ytmp * 8) + (xtmp - 8));
+    If (virtual board[line idx] > 0)
+    {
+        If ((virtual board[line idx] % 2) == (1 - (virtual board[idx] % 2)))
+        {
+            If (Not (only not capture?))
+            {
+                If (promotions? And Operator.Contains(18, ytmp))
+                {
+                    Call add move(idx)(Operator.Join(xtmp, "Q"))((Not (only not capture?)));
+                    Call add move(idx)(Operator.Join(xtmp, "B"))((Not (only not capture?)));
+                    Call add move(idx)(Operator.Join(xtmp, "N"))((Not (only not capture?)));
+                    Call add move(idx)(Operator.Join(xtmp, "R"))((Not (only not capture?)));
+                }
+                Else
+                {
+                    Call add move(idx)(line idx)((Not (only not capture?)));
+                }
+            }
+        }
+        Stop(this script);
+    }
+    If (Not (only capture?))
+    {
+        If (promotions? And Operator.Contains(18, ytmp))
+        {
+            Call add move(idx)(Operator.Join(xtmp, "Q"))((Not (only not capture?)));
+            Call add move(idx)(Operator.Join(xtmp, "B"))((Not (only not capture?)));
+            Call add move(idx)(Operator.Join(xtmp, "N"))((Not (only not capture?)));
+            Call add move(idx)(Operator.Join(xtmp, "R"))((Not (only not capture?)));
+        }
+        Else
+        {
+            Call add move(idx)(line idx)((Not (only not capture?)));
+        }
+    }
+}
+
+Define clear TT (warp=true)
+{
+    List.DeleteAll(zobrist hash);
+    List.DeleteAll(TT.board);
+    List.DeleteAll(TT.depth);
+    List.DeleteAll(TT.flag);
+    List.DeleteAll(TT.value);
+    List.DeleteAll(TT.PV);
+}
+
+Define del current (warp=true)
+{
+    curr = Operator.Join(Operator.Join(turn, virtual board), Operator.Join(Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 8)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 64))))), Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 1)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 57)))))));
+    pos = List.IndexOf(REPimpl, curr);
+    If (REPimpl[(pos + 1)] < 2)
+    {
+        List.DeleteItem(REPimpl, pos);
+        List.DeleteItem(REPimpl, pos);
+    }
+    Else
+    {
+        List.ReplaceItem(REPimpl, (pos + 1), (REPimpl[(pos + 1)] - 1));
+    }
+}
+
+Define encode move(string start)(string end)(string promotion)(string is_capture)(string captured_piece)(string castle_type)(string en_passant)(string en_passant_val)(string half_moves) (warp=true)
+{
+    move = (start - 1);
+    move += (64 * (end - 1));
+    move += (4096 * promotion);
+    move += (65536 * is_capture);
+    move += (131072 * captured_piece);
+    move += (1048576 * castle_type);
+    move += (5242880 * en_passant);
+    move += (10485760 * en_passant_val);
+    move += (681574400 * half_moves);
+    move += (68157440000 * (1 - o-o-o w));
+    move += (136314880000 * (1 - o-o w));
+    move += (272629760000 * (1 - o-o-o b));
+    move += (545259520000 * (1 - o-o b));
+}
+
+Define Evaluate PST (warp=true)
+{
+    PST eval = 0;
+    i = 0;
+    Repeat (64)
+    {
+        i += 1;
+        PST eval += tables[((virtual board[i] * 64) + (i - 64))];
+    }
+    List.DeleteAll(changes for eval);
+}
+
+Define Evaluate PST (fast) (warp=true)
+{
+    Repeat (List.Length(changes for eval))
+    {
+        Call get eval PST change(((changes for eval[1] % 64) + 1))((floor((changes for eval[1] / 64)) % 13))((floor((changes for eval[1] / 832)) % 13));
+        PST eval += change;
+        List.DeleteItem(changes for eval, 1);
+    }
+}
+
+Define generate all move(bool is maximizing?)(bool only captures?) (warp=true)
+{
+    List.DeleteAll(moves);
+    i2 = 0;
+    Repeat (64)
+    {
+        i2 += 1;
+        If (virtual board[i2] > 0)
+        {
+            If ((virtual board[i2] % 2) == is maximizing?)
+            {
+                Call generate moves(i2)(only captures?)(is maximizing?)("");
+            }
+        }
+    }
+}
+
+Define generate line(string idx)(string offx)(string offy)(bool only captures?)(string color) (warp=true)
+{
+    ytmp = ceiling((idx / 8));
+    xtmp = (((idx - 1) % 8) + 1);
+    Repeat (8)
+    {
+        xtmp += offx;
+        ytmp += offy;
+        If ((xtmp < 1) Or (ytmp < 1))
+        {
+            Stop(this script);
+        }
+        If ((xtmp > 8) Or (ytmp > 8))
+        {
+            Stop(this script);
+        }
+        line idx = ((ytmp * 8) + (xtmp - 8));
+        If (virtual board[line idx] > 0)
+        {
+            If ((virtual board[line idx] % 2) == (1 - color))
+            {
+                Call add move(idx)(line idx)((Not ()));
+            }
+            Stop(this script);
+        }
+        If (Not (only captures?))
+        {
+            Call add move(idx)(line idx)((Not ()));
+        }
+    }
+}
+
+Define generate moves(string idx)(bool only captures?)(string color (bin))(string piece) (warp=true)
+{
+    If (piece == "")
+    {
+        piece = virtual board[idx];
+    }
+    Else
+    {
+        piece = piece;
+    }
+    If (piece > 0)
+    {
+        If ((piece < 11) And (piece > 4))
+        {
+            If (piece > 6)
+            {
+                Call generate line(idx)(0)(1)(only captures?)(color (bin));
+                Call generate line(idx)(1)(0)(only captures?)(color (bin));
+                Call generate line(idx)(0)(-1)(only captures?)(color (bin));
+                Call generate line(idx)(-1)(0)(only captures?)(color (bin));
+            }
+            If ((piece < 7) Or (piece > 8))
+            {
+                Call generate line(idx)(1)(1)(only captures?)(color (bin));
+                Call generate line(idx)(1)(-1)(only captures?)(color (bin));
+                Call generate line(idx)(-1)(1)(only captures?)(color (bin));
+                Call generate line(idx)(-1)(-1)(only captures?)(color (bin));
+            }
+        }
+        Else
+        {
+            If (piece < 3)
+            {
+                If (piece == 1)
+                {
+                    len = List.Length(moves);
+                    Call check and add move(idx)(0)(-1)(only captures?)((Not ()))((Not ()));
+                    If (ceiling((idx / 8)) == 7)
+                    {
+                        If (List.Length(moves) > len)
+                        {
+                            Call check and add move(idx)(0)(-2)(only captures?)((Not ()))(( Or ));
+                        }
+                    }
+                    Call check and add move(idx)(1)(-1)((Not ()))(( Or ))((Not ()));
+                    Call check and add move(idx)(-1)(-1)((Not ()))(( Or ))((Not ()));
+                }
+                Else
+                {
+                    len = List.Length(moves);
+                    Call check and add move(idx)(0)(1)(only captures?)((Not ()))((Not ()));
+                    If (ceiling((idx / 8)) == 2)
+                    {
+                        If (List.Length(moves) > len)
+                        {
+                            Call check and add move(idx)(0)(2)(only captures?)((Not ()))(( Or ));
+                        }
+                    }
+                    Call check and add move(idx)(1)(1)((Not ()))(( Or ))((Not ()));
+                    Call check and add move(idx)(-1)(1)((Not ()))(( Or ))((Not ()));
+                }
+            }
+            Else
+            {
+                If (piece < 5)
+                {
+                    Call check and add move(idx)(2)(1)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(1)(2)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(-2)(1)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(-1)(2)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(2)(-1)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(1)(-2)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(-2)(-1)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(-1)(-2)(only captures?)(( Or ))(( Or ));
+                }
+                Else
+                {
+                    Call check and add move(idx)(1)(1)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(0)(1)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(-1)(1)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(1)(-1)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(0)(-1)(only captures?)(( Or ))(( Or ));
+                    Call check and add move(idx)(-1)(-1)(only captures?)(( Or ))(( Or ));
+                    len = List.Length(moves);
+                    Call check and add move(idx)(1)(0)(only captures?)(( Or ))(( Or ));
+                    If (piece == 11)
+                    {
+                        If (List.Length(moves) > len)
+                        {
+                            If (((virtual board[61] == 11) And (((virtual board[62] == 0) And (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 64))))) And (virtual board[63] == 0))) And (virtual board[64] == 7))
+                            {
+                                Call attacked piece(61)(11);
+                                If (attacked? == "false")
+                                {
+                                    Call attacked piece(62)(11);
+                                    If (attacked? == "false")
+                                    {
+                                        Call attacked piece(63)(11);
+                                        If (attacked? == "false")
+                                        {
+                                            Call check and add move(idx)(2)(0)(only captures?)(( Or ))(( Or ));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        len = List.Length(moves);
+                        Call check and add move(idx)(-1)(0)(only captures?)(( Or ))(( Or ));
+                        If (List.Length(moves) > len)
+                        {
+                            If ((virtual board[61] == 11) And ((((virtual board[60] == 0) And (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 57))))) And ((virtual board[59] == 0) And (virtual board[58] == 0))) And (virtual board[57] == 7)))
+                            {
+                                Call attacked piece(61)(11);
+                                If (attacked? == "false")
+                                {
+                                    Call attacked piece(60)(11);
+                                    If (attacked? == "false")
+                                    {
+                                        Call attacked piece(59)(11);
+                                        If (attacked? == "false")
+                                        {
+                                            Call check and add move(idx)(-2)(0)(only captures?)(( Or ))(( Or ));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    Else
+                    {
+                        If (List.Length(moves) > len)
+                        {
+                            If (((virtual board[5] == 12) And (((virtual board[6] == 0) And (Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 8))))) And (virtual board[7] == 0))) And (virtual board[8] == 8))
+                            {
+                                Call attacked piece(5)(12);
+                                If (attacked? == "false")
+                                {
+                                    Call attacked piece(6)(12);
+                                    If (attacked? == "false")
+                                    {
+                                        Call attacked piece(7)(12);
+                                        If (attacked? == "false")
+                                        {
+                                            Call check and add move(idx)(2)(0)(only captures?)(( Or ))(( Or ));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        len = List.Length(moves);
+                        Call check and add move(idx)(-1)(0)(only captures?)(( Or ))(( Or ));
+                        If (List.Length(moves) > len)
+                        {
+                            If ((virtual board[5] == 12) And ((((virtual board[4] == 0) And (Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 1))))) And ((virtual board[3] == 0) And (virtual board[2] == 0))) And (virtual board[1] == 8)))
+                            {
+                                Call attacked piece(5)(12);
+                                If (attacked? == "false")
+                                {
+                                    Call attacked piece(4)(12);
+                                    If (attacked? == "false")
+                                    {
+                                        Call attacked piece(3)(12);
+                                        If (attacked? == "false")
+                                        {
+                                            Call check and add move(idx)(-2)(0)(only captures?)(( Or ))(( Or ));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+Define get current flag (warp=true)
+{
+    flag = EXACT;
+    If (Not ((value > alpha)))
+    {
+        flag = UPPERBOUND;
+        Stop(this script);
+    }
+    If (Not ((value < beta)))
+    {
+        flag = LOWERBOUND;
+    }
+}
+
+Define get current flag q (warp=true)
+{
+    flag = EXACT;
+    If (Not ((qBest > q A)))
+    {
+        flag = UPPERBOUND;
+        Stop(this script);
+    }
+    If (Not ((qBest < q B)))
+    {
+        flag = LOWERBOUND;
+    }
+}
+
+Define get eval PST change(string idx)(string old)(string new) (warp=true)
+{
+    If (new == 0)
+    {
+        If (old == 0)
+        {
+            change = 0;
+        }
+        Else
+        {
+            change = ( - tables[((old * 64) + (idx - 64))]);
+        }
+    }
+    Else
+    {
+        If (old == 0)
+        {
+            change = tables[((new * 64) + (idx - 64))];
+        }
+        Else
+        {
+            If (old == new)
+            {
+                change = 0;
+            }
+            Else
+            {
+                change = (tables[((new * 64) + (idx - 64))] - tables[((old * 64) + (idx - 64))]);
+            }
+        }
+    }
+}
+
+Define get hash (warp=true)
+{
+    List.DeleteAll(changes for hash);
+    hash = 0;
+    idxhash = 0;
+    Repeat (64)
+    {
+        idxhash += 1;
+        If (virtual board[idxhash] > 0)
+        {
+            hash += zobrist hash[((virtual board[idxhash] * 64) + (idxhash - 64))];
+        }
+    }
+    old turn hash = zobrist hash[((turn == "w") + 785)];
+    hash += old turn hash;
+    old castle hash = zobrist hash[(((((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 8)))) * 8) + ((Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 64)))) * 4)) + (((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 1)))) * 2) + (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 57)))))) + 786)];
+    hash += old castle hash;
+}
+
+Define get hash change(string idx)(string old)(string new) (warp=true)
+{
+    If (new == 0)
+    {
+        If (old == 0)
+        {
+            change = 0;
+        }
+        Else
+        {
+            change = ( - zobrist hash[((old * 64) + (idx - 64))]);
+        }
+    }
+    Else
+    {
+        If (old == 0)
+        {
+            change = zobrist hash[((new * 64) + (idx - 64))];
+        }
+        Else
+        {
+            If (old == new)
+            {
+                change = 0;
+            }
+            Else
+            {
+                change = (zobrist hash[((new * 64) + (idx - 64))] - zobrist hash[((old * 64) + (idx - 64))]);
+            }
+        }
+    }
+}
+
+Define go (warp=false)
+{
+    Forever
+    {
+        depthIter += 1;
+        Call LOG(depthIter)("start search");
+        Call minimax(0)(depthIter)((-1 / ))((1 / ))((turn == "w"))("null")("null")("null")("null")("");
+        If (break? == 0)
+        {
+            PVactual = childPv;
+        }
+        Else
+        {
+            Stop(this script);
+        }
+    }
+}
+
+Define init lists (warp=true)
+{
+    List.DeleteAll(vals_mg);
+    Call Load list cpp("{ 82, 337, 365, 477, 1025,  0}");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(vals_mg, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    List.DeleteAll(vals_eg);
+    Call Load list cpp("{ 94, 281, 297, 512,  936,  0}");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(vals_eg, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    List.DeleteAll(mg_vals_PST);
+    List.DeleteAll(eg_vals_PST);
+    Call Load list cpp("{       0,   0,   0,   0,   0,   0,  0,   0,      98, 134,  61,  95,  68, 126, 34, -11,      -6,   7,  26,  31,  65,  56, 25, -20,     -14,  13,   6,  21,  23,  12, 17, -23,     -27,  -2,  -5,  12,  17,   6, 10, -25,     -26,  -4,  -4, -10,   3,   3, 33, -12,     -35,  -1, -20, -23, -15,  24, 38, -22,       0,   0,   0,   0,   0,   0,  0,   0, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(mg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    Call Load list cpp("{       0,   0,   0,   0,   0,   0,   0,   0,     178, 173, 158, 134, 147, 132, 165, 187,      94, 100,  85,  67,  56,  53,  82,  84,      32,  24,  13,   5,  -2,   4,  17,  17,      13,   9,  -3,  -7,  -7,  -8,   3,  -1,       4,   7,  -6,   1,   0,  -5,  -1,  -8,      13,   8,   8,  10,  13,   0,   2,  -7,       0,   0,   0,   0,   0,   0,   0,   0, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(eg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    Call Load list cpp("{     -167, -89, -34, -49,  61, -97, -15, -107,      -73, -41,  72,  36,  23,  62,   7,  -17,      -47,  60,  37,  65,  84, 129,  73,   44,       -9,  17,  19,  53,  37,  69,  18,   22,      -13,   4,  16,  13,  28,  19,  21,   -8,      -23,  -9,  12,  10,  19,  17,  25,  -16,      -29, -53, -12,  -3,  -1,  18, -14,  -19,     -105, -21, -58, -33, -17, -28, -19,  -23, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(mg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    Call Load list cpp("{     -58, -38, -13, -28, -31, -27, -63, -99,     -25,  -8, -25,  -2,  -9, -25, -24, -52,     -24, -20,  10,   9,  -1,  -9, -19, -41,     -17,   3,  22,  22,  22,  11,   8, -18,     -18,  -6,  16,  25,  16,  17,   4, -18,     -23,  -3,  -1,  15,  10,  -3, -20, -22,     -42, -20, -10,  -5,  -2, -20, -23, -44,     -29, -51, -23, -15, -22, -18, -50, -64, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(eg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    Call Load list cpp("{     -29,   4, -82, -37, -25, -42,   7,  -8,     -26,  16, -18, -13,  30,  59,  18, -47,     -16,  37,  43,  40,  35,  50,  37,  -2,      -4,   5,  19,  50,  37,  37,   7,  -2,      -6,  13,  13,  26,  34,  12,  10,   4,       0,  15,  15,  15,  14,  27,  18,  10,       4,  15,  16,   0,   7,  21,  33,   1,     -33,  -3, -14, -21, -13, -12, -39, -21, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(mg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    Call Load list cpp("{     -14, -21, -11,  -8, -7,  -9, -17, -24,      -8,  -4,   7, -12, -3, -13,  -4, -14,       2,  -8,   0,  -1, -2,   6,   0,   4,      -3,   9,  12,   9, 14,  10,   3,   2,      -6,   3,  13,  19,  7,  10,  -3,  -9,     -12,  -3,   8,  10, 13,   3,  -7, -15,     -14, -18,  -7,  -1,  4,  -9, -15, -27,     -23,  -9, -23,  -5, -9, -16,  -5, -17, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(eg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    Call Load list cpp("{      32,  42,  32,  51, 63,  9,  31,  43,      27,  32,  58,  62, 80, 67,  26,  44,      -5,  19,  26,  36, 17, 45,  61,  16,     -24, -11,   7,  26, 24, 35,  -8, -20,     -36, -26, -12,  -1,  9, -7,   6, -23,     -45, -25, -16, -17,  3,  0,  -5, -33,     -44, -16, -20,  -9, -1, 11,  -6, -71,     -19, -13,   1,  17, 16,  7, -37, -26, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(mg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    Call Load list cpp("{     13, 10, 18, 15, 12,  12,   8,   5,     11, 13, 13, 11, -3,   3,   8,   3,      7,  7,  7,  5,  4,  -3,  -5,  -3,      4,  3, 13,  1,  2,   1,  -1,   2,      3,  5,  8,  4, -5,  -6,  -8, -11,     -4,  0, -5, -1, -7, -12,  -8, -16,     -6, -6,  0,  2, -9,  -9, -11,  -3,     -9,  2,  3, -1, -5, -13,   4, -20, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(eg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    Call Load list cpp("{     -28,   0,  29,  12,  59,  44,  43,  45,     -24, -39,  -5,   1, -16,  57,  28,  54,     -13, -17,   7,   8,  29,  56,  47,  57,     -27, -27, -16, -16,  -1,  17,  -2,   1,      -9, -26,  -9, -10,  -2,  -4,   3,  -3,     -14,   2, -11,  -2,  -5,   2,  14,   5,     -35,  -8,  11,   2,   8,  15,  -3,   1,      -1, -18,  -9,  10, -15, -25, -31, -50, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(mg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    Call Load list cpp("{      -9,  22,  22,  27,  27,  19,  10,  20,     -17,  20,  32,  41,  58,  25,  30,   0,     -20,   6,   9,  49,  47,  35,  19,   9,       3,  22,  24,  45,  57,  40,  57,  36,     -18,  28,  19,  47,  31,  34,  39,  23,     -16, -27,  15,   6,   9,  17,  10,   5,     -22, -23, -30, -16, -16, -23, -36, -32,     -33, -28, -22, -43,  -5, -32, -20, -41, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(eg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    Call Load list cpp("{     -65,  23,  16, -15, -56, -34,   2,  13,      29,  -1, -20,  -7,  -8,  -4, -38, -29,      -9,  24,   2, -16, -20,   6,  22, -22,     -17, -20, -12, -27, -30, -25, -14, -36,     -49,  -1, -27, -39, -46, -44, -33, -51,     -14, -14, -22, -46, -44, -30, -15, -27,       1,   7,  -8, -64, -43, -16,   9,   8,     -15,  36,  12, -54,   8, -28,  24,  14, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(mg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+    Call Load list cpp("{     -74, -35, -18, -18, -11,  15,   4, -17,     -12,  17,  14,  17,  17,  38,  23,  11,      10,  17,  23,  15,  20,  45,  44,  13,      -8,  22,  24,  27,  26,  33,  26,   3,     -18,  -4,  21,  24,  27,  23,   9, -11,     -19,  -3,  11,  21,  23,  16,   7,  -9,     -27, -11,   4,  13,  14,   4,  -5, -17,     -53, -34, -21, -11, -28, -14, -24, -43, }");
+    Repeat (List.Length(loaded))
+    {
+        List.Add(eg_vals_PST, loaded[1]);
+        List.DeleteItem(loaded, 1);
+    }
+}
+
+Define init TT(string size) (warp=true)
+{
+    EXACT = 0;
+    LOWERBOUND = 1;
+    UPPERBOUND = 2;
+    TT size = size;
+    Used entries = 0;
+    Overwritings = 0;
+    List.DeleteAll(zobrist hash);
+    List.DeleteAll(TT.board);
+    List.DeleteAll(TT.depth);
+    List.DeleteAll(TT.flag);
+    List.DeleteAll(TT.value);
+    List.DeleteAll(TT.PV);
+    List.DeleteAll(TT.infos);
+    Repeat (size)
+    {
+        List.Add(TT.board, "");
+        List.Add(TT.depth, "");
+        List.Add(TT.flag, "");
+        List.Add(TT.value, "");
+        List.Add(TT.PV, "");
+        List.Add(TT.infos, "");
+    }
+    Repeat (802)
+    {
+        List.Add(zobrist hash, Operator.Random((1 - ((256 * 256) * (256 * 256))) , ((256 * 256) * (256 * 256))));
+    }
+}
+
+Define is compiled(bool is compiled?) (warp=false)
+{
+}
+
+Define Load list cpp(string data) (warp=true)
+{
+    List.DeleteAll(loaded);
+    i = 1;
+    List.Add(loaded, "");
+    Repeat ((Variable.Length(data) - 2))
+    {
+        i += 1;
+        If (Operator.LetterOf(data, i) == ",")
+        {
+            List.Add(loaded, "");
+        }
+        Else
+        {
+            If (Not ((Operator.LetterOf(data, i) == " ")))
+            {
+                List.ReplaceItem(loaded, List.Length(loaded), Operator.Join(loaded[List.Length(loaded)], Operator.LetterOf(data, i)));
+            }
+        }
+    }
+    If ("" == loaded[List.Length(loaded)])
+    {
+        List.DeleteItem(loaded, List.Length(loaded));
+    }
+}
+
+Define LOG(string data)(string type) (warp=true)
+{
+    List.Add(LOG, Operator.Join(Operator.Join(Operator.Join((Operator.Round(((Sensing.DaysSince2000() - START LOG) * 8640000)) / 100), ": "), type), Operator.Join(": ", data)));
+}
+
+Define makemove impl(string start)(string end) (warp=true)
+{
+    If (turn == "b")
+    {
+        fullmoves += 1;
+    }
+    halfmoves += 1;
+    turn = Operator.LetterOf("wb", ((turn == "w") + 1));
+    If ((virtual board[start] < 3) And (Not (((end + ) == end))))
+    {
+        tmp = ((List.IndexOf(pieces, Operator.Join(Operator.LetterOf(end, 2), "b")) / 2) - 1);
+        tmp2 = (Operator.LetterOf(end, 1) + ((19 < start) * 56));
+        halfmoves = 0;
+    }
+    Else
+    {
+        tmp = 0;
+        tmp2 = end;
+    }
+    If (virtual board[tmp2] > 0)
+    {
+        tmp3 = 1;
+        tmp4 = (ceiling((virtual board[tmp2] / 2)) - 1);
+    }
+    Else
+    {
+        tmp3 = 0;
+        tmp4 = 0;
+    }
+    tmp5 = 0;
+    If (tmp == 0)
+    {
+        If (tmp3 == 0)
+        {
+            If (virtual board[start] > 10)
+            {
+                If (abs((start - end)) == 2)
+                {
+                    If (start < end)
+                    {
+                        If (start < 33)
+                        {
+                            tmp5 = 1;
+                        }
+                        Else
+                        {
+                            tmp5 = 2;
+                        }
+                    }
+                    Else
+                    {
+                        If (start < 33)
+                        {
+                            tmp5 = 3;
+                        }
+                        Else
+                        {
+                            tmp5 = 4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    tmp6 = 0;
+    If ((tmp3 == 1) Or ((tmp5 > 0) Or (tmp > 0)))
+    {
+        halfmoves = 0;
+    }
+    Call encode move(start)(tmp2)(tmp)(tmp3)(tmp4)(tmp5)(tmp6)(en passant)(halfmoves);
+    If (start == 5)
+    {
+        o-o-o b = 0;
+        o-o b = 0;
+    }
+    Else
+    {
+        If (start == 61)
+        {
+            o-o w = 0;
+            o-o-o w = 0;
+        }
+        Else
+        {
+            If ((start == 1) Or (end == 1))
+            {
+                o-o-o b = 0;
+            }
+            Else
+            {
+                If ((start == 8) Or (end == 8))
+                {
+                    o-o b = 0;
+                }
+                Else
+                {
+                    If ((start == 57) Or (end == 57))
+                    {
+                        o-o-o w = 0;
+                    }
+                    Else
+                    {
+                        If ((start == 64) Or (end == 64))
+                        {
+                            o-o w = 0;
+                        }
+                        Else
+                        {
+                            If Operator.Contains("_8q_8n_8b_8r_1q_1n_1b_1r_", Operator.Join("_", Operator.Join(end, "_")))
+                            {
+                                If (start < 32)
+                                {
+                                    If (Operator.LetterOf(end, 1) == 1)
+                                    {
+                                        o-o-o b = 0;
+                                    }
+                                    Else
+                                    {
+                                        o-o b = 0;
+                                    }
+                                }
+                                Else
+                                {
+                                    If (Operator.LetterOf(end, 1) == 1)
+                                    {
+                                        o-o-o w = 0;
+                                    }
+                                    Else
+                                    {
+                                        o-o w = 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    Call add change(tmp2) piece old(virtual board[tmp2]) new piece(virtual board[start]) spec?("");
+    Call add change(start) piece old(virtual board[start]) new piece(0) spec?("");
+    List.ReplaceItem(virtual board, tmp2, virtual board[start]);
+    List.ReplaceItem(virtual board, start, 0);
+    If (tmp5 > 0)
+    {
+        If (tmp5 < 3)
+        {
+            If (tmp5 < 2)
+            {
+                Call add change(6) piece old(0) new piece(8) spec?("");
+                Call add change(8) piece old(8) new piece(0) spec?("");
+                List.ReplaceItem(virtual board, 6, 8);
+                List.ReplaceItem(virtual board, 8, 0);
+            }
+            Else
+            {
+                Call add change(62) piece old(0) new piece(7) spec?("");
+                Call add change(64) piece old(7) new piece(0) spec?("");
+                List.ReplaceItem(virtual board, 62, 7);
+                List.ReplaceItem(virtual board, 64, 0);
+            }
+        }
+        Else
+        {
+            If (tmp5 < 4)
+            {
+                Call add change(1) piece old(8) new piece(0) spec?("");
+                Call add change(4) piece old(0) new piece(8) spec?("");
+                List.ReplaceItem(virtual board, 1, 0);
+                List.ReplaceItem(virtual board, 4, 8);
+            }
+            Else
+            {
+                Call add change(57) piece old(7) new piece(0) spec?("");
+                Call add change(60) piece old(0) new piece(7) spec?("");
+                List.ReplaceItem(virtual board, 57, 0);
+                List.ReplaceItem(virtual board, 60, 7);
+            }
+        }
+        Stop(this script);
+    }
+    If (tmp > 0)
+    {
+        tmp7 = (((tmp + 1) * 2) - (virtual board[tmp2] == 1));
+        Call add change(tmp2) piece old(virtual board[tmp2]) new piece(tmp7) spec?("");
+        List.ReplaceItem(virtual board, tmp2, tmp7);
+    }
+}
+
+Define make_move_int(string start)(string end) (warp=true)
+{
+    List.Add(TMPtoMODIFY, start);
+    List.Add(TMPtoMODIFY, end);
+    If ((end + ) == end)
+    {
+        Call makemove impl((start + ))((end + ));
+    }
+    Else
+    {
+        Call makemove impl((start + ))(end);
+    }
+}
+
+Define minimax(string offDepth)(string depth)(string alpha)(string beta)(bool isWhite)(string moves)(string idx)(string value)(string bestPv)(string hash) (warp=true)
+{
+    If (think time < ((Sensing.DaysSince2000() - START LOG) * 86400))
+    {
+        break? = 1;
+        Stop(this script);
+    }
+    If List.ContainsItem(REPimpl, 3)
+    {
+        score = 0;
+        childPv = "";
+        Stop(this script);
+    }
+    alpha = alpha;
+    beta = beta;
+    Call Update hash (fast);
+    If (TT.board[((hash % TT size) + 1)] == Operator.Join(Operator.Join(turn, virtual board), Operator.Join(Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 8)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 64))))), Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 1)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 57))))))))
+    {
+        If (TT.infos[((hash % TT size) + 1)] == "false")
+        {
+            If (Not ((TT.depth[((hash % TT size) + 1)] < depth)))
+            {
+                Used TT += 1;
+                TT.flag = TT.flag[((hash % TT size) + 1)];
+                TT.value = TT.value[((hash % TT size) + 1)];
+                If (TT.flag == EXACT)
+                {
+                    score = TT.value;
+                    childPv = TT.PV[((hash % TT size) + 1)];
+                    value = value;
+                    bestPv = bestPv;
+                    hash = hash;
+                    Stop(this script);
+                }
+                If (TT.flag == LOWERBOUND)
+                {
+                    If (TT.value > alpha)
+                    {
+                        alpha = TT.value;
+                    }
+                }
+                If (TT.flag == UPPERBOUND)
+                {
+                    If (TT.value < beta)
+                    {
+                        beta = TT.value;
+                    }
+                }
+                If (Not ((alpha < beta)))
+                {
+                    score = TT.value;
+                    childPv = TT.PV[((hash % TT size) + 1)];
+                    value = value;
+                    bestPv = bestPv;
+                    hash = hash;
+                    Stop(this script);
+                }
+            }
+        }
+    }
+    If isWhite
+    {
+        If (Not (Operator.Contains(virtual board, 11)))
+        {
+            score = (-1 / );
+            childPv = "";
+            hash = hash;
+            Stop(this script);
+        }
+    }
+    Else
+    {
+        If (Not (Operator.Contains(virtual board, 12)))
+        {
+            score = (1 / );
+            childPv = "";
+            hash = hash;
+            Stop(this script);
+        }
+    }
+    If (depth == 0)
+    {
+        q childPV = "";
+        Call Qsearch(offDepth)(alpha)(beta)("null")("null")("null")(isWhite)(0)("")("")("");
+        If (break? == 1)
+        {
+            Stop(this script);
+        }
+        Call save to TT(0)(((hash % TT size) + 1))(q score)(EXACT)(q childPV)(( Or ));
+        score = q score;
+        childPv = q childPV;
+        hash = hash;
+        Stop(this script);
+    }
+    Call generate all move(isWhite)(( Or ));
+    Call sort moves(isWhite);
+    idx = 0;
+    moves = moves;
+    bestPv = "";
+    If isWhite
+    {
+        value = (-1 / );
+        Repeat (List.Length(moves))
+        {
+            nodes += 1;
+            Call add current;
+            Call make_move_int(Operator.Join(Operator.LetterOf(moves, (idx + 1)), Operator.LetterOf(moves, (idx + 2))))(Operator.Join(Operator.LetterOf(moves, (idx + 3)), Operator.LetterOf(moves, (idx + 4))));
+            List.Add(moves history, move);
+            Call minimax((offDepth + 1))((depth - 1))(alpha)(beta)((Not (isWhite)))(moves)(idx)(value)(bestPv)(hash);
+            Call unmake move(moves history[List.Length(moves history)]);
+            List.DeleteItem(moves history, List.Length(moves history));
+            Call del current;
+            If (score > value)
+            {
+                value = score;
+                bestPv = Operator.Join(Operator.Join(Operator.Join(Operator.LetterOf(moves, (idx + 1)), Operator.LetterOf(moves, (idx + 2))), Operator.Join(Operator.LetterOf(moves, (idx + 3)), Operator.LetterOf(moves, (idx + 4)))), Operator.Join(" ", childPv));
+            }
+            If (alpha < value)
+            {
+                alpha = value;
+            }
+            If (Not ((alpha < beta)))
+            {
+                Call get current flag;
+                Call save to TT(depth)(((hash % TT size) + 1))(value)(flag)(bestPv)(( Or ));
+                score = value;
+                childPv = bestPv;
+                alpha = alpha;
+                beta = beta;
+                value = value;
+                bestPv = bestPv;
+                moves = moves;
+                idx = idx;
+                hash = hash;
+                Stop(this script);
+            }
+            If (break? == 1)
+            {
+                Stop(this script);
+            }
+            idx += 5;
+        }
+    }
+    Else
+    {
+        value = (1 / );
+        Repeat (List.Length(moves))
+        {
+            nodes += 1;
+            Call add current;
+            Call make_move_int(Operator.Join(Operator.LetterOf(moves, (idx + 1)), Operator.LetterOf(moves, (idx + 2))))(Operator.Join(Operator.LetterOf(moves, (idx + 3)), Operator.LetterOf(moves, (idx + 4))));
+            List.Add(moves history, move);
+            Call minimax((offDepth + 1))((depth - 1))(alpha)(beta)((Not (isWhite)))(moves)(idx)(value)(bestPv)(hash);
+            Call unmake move(moves history[List.Length(moves history)]);
+            List.DeleteItem(moves history, List.Length(moves history));
+            Call del current;
+            If (score < value)
+            {
+                value = score;
+                bestPv = Operator.Join(Operator.Join(Operator.Join(Operator.LetterOf(moves, (idx + 1)), Operator.LetterOf(moves, (idx + 2))), Operator.Join(Operator.LetterOf(moves, (idx + 3)), Operator.LetterOf(moves, (idx + 4)))), Operator.Join(" ", childPv));
+            }
+            If (beta > value)
+            {
+                beta = value;
+            }
+            If (Not ((alpha < beta)))
+            {
+                Call get current flag;
+                Call save to TT(depth)(((hash % TT size) + 1))(value)(flag)(bestPv)(( Or ));
+                score = value;
+                childPv = bestPv;
+                alpha = alpha;
+                beta = beta;
+                value = value;
+                bestPv = bestPv;
+                moves = moves;
+                idx = idx;
+                hash = hash;
+                Stop(this script);
+            }
+            If (break? == 1)
+            {
+                Stop(this script);
+            }
+            idx += 5;
+        }
+    }
+    If Operator.Contains(value, "infinity")
+    {
+        If Operator.Contains(value, "-")
+        {
+            Call attacked piece(List.IndexOf(virtual board, 11))(11);
+            If (attacked? == "true")
+            {
+                value = (-1000000 + offDepth);
+            }
+            Else
+            {
+                value = 0;
+            }
+        }
+        Else
+        {
+            Call attacked piece(List.IndexOf(virtual board, 12))(12);
+            If (attacked? == "true")
+            {
+                value = (1000000 - offDepth);
+            }
+            Else
+            {
+                value = 0;
+            }
+        }
+    }
+    Call get current flag;
+    Call save to TT(depth)(((hash % TT size) + 1))(value)(flag)(bestPv)(( Or ));
+    score = value;
+    childPv = bestPv;
+    alpha = alpha;
+    beta = beta;
+    value = value;
+    bestPv = bestPv;
+    moves = moves;
+    idx = idx;
+    hash = hash;
+}
+
+Define position to virtual board (warp=true)
+{
+    List.DeleteAll(virtual board);
+    Repeat (64)
+    {
+        List.Add(virtual board, List.IndexOf(pieces, position[(List.Length(virtual board) + 1)]));
+    }
+}
+
+Define Qsearch(string qoffDepth)(string qA)(string qB)(string qeval)(string qmoves)(string qmoveidx)(bool qturn)(string qdepth)(string qBest)(string qPV)(string qHash) (warp=true)
+{
+    If (think time < ((Sensing.DaysSince2000() - START LOG) * 86400))
+    {
+        break? = 1;
+        Stop(this script);
+    }
+    If isWhite
+    {
+        If (Not (Operator.Contains(virtual board, 11)))
+        {
+            q score = (-1 / );
+            q childPV = "";
+            Stop(this script);
+        }
+    }
+    Else
+    {
+        If (Not (Operator.Contains(virtual board, 12)))
+        {
+            q score = (1 / );
+            q childPV = "";
+            Stop(this script);
+        }
+    }
+    q A = qA;
+    q B = qB;
+    Call Update hash (fast);
+    If (TT.board[((hash % TT size) + 1)] == Operator.Join(Operator.Join(turn, virtual board), Operator.Join(Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 8)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 64))))), Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 1)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 57))))))))
+    {
+        If (TT.infos[((hash % TT size) + 1)] == "true")
+        {
+            Used TT += 1;
+            TT.flag = TT.flag[((hash % TT size) + 1)];
+            TT.value = TT.value[((hash % TT size) + 1)];
+            If (TT.flag == EXACT)
+            {
+                q score = TT.value;
+                q childPV = TT.PV[((hash % TT size) + 1)];
+                qBest = qBest;
+                q PV = qPV;
+                hash = qHash;
+                Stop(this script);
+            }
+            If (TT.flag == LOWERBOUND)
+            {
+                If (TT.value > q A)
+                {
+                    q A = TT.value;
+                }
+            }
+            If (TT.flag == UPPERBOUND)
+            {
+                If (TT.value < q B)
+                {
+                    q B = TT.value;
+                }
+            }
+            If (Not ((q A < q B)))
+            {
+                q score = TT.value;
+                q childPV = TT.PV[((hash % TT size) + 1)];
+                qBest = qBest;
+                q PV = qPV;
+                hash = qHash;
+                Stop(this script);
+            }
+        }
+    }
+    Call Evaluate PST (fast);
+    q eval = PST eval;
+    If qturn
+    {
+        If (Not ((q eval < q B)))
+        {
+            q eval = qeval;
+            q score = q B;
+            hash = qHash;
+            Stop(this script);
+        }
+        If (q eval > q A)
+        {
+            q A = q eval;
+        }
+    }
+    Else
+    {
+        If (Not ((q eval > q A)))
+        {
+            q eval = qeval;
+            q score = q A;
+            hash = qHash;
+            Stop(this script);
+        }
+        If (q eval < q B)
+        {
+            q B = q eval;
+        }
+    }
+    Call generate all move(qturn)((Not ()));
+    If (List.Length(moves) == 0)
+    {
+        q score = q eval;
+        q A = qA;
+        q B = qB;
+        hash = qHash;
+        Stop(this script);
+    }
+    Else
+    {
+    }
+    q PV = "";
+    q moveidx = 0;
+    q moves = moves;
+    If qturn
+    {
+        qBest = "-infinity";
+        Repeat (List.Length(moves))
+        {
+            nodes += 1;
+            q nodes += 1;
+            Call add current;
+            Call make_move_int(Operator.Join(Operator.LetterOf(q moves, (q moveidx + 1)), Operator.LetterOf(q moves, (q moveidx + 2))))(Operator.Join(Operator.LetterOf(q moves, (q moveidx + 3)), Operator.LetterOf(q moves, (q moveidx + 4))));
+            List.Add(moves history, move);
+            Call Qsearch((qoffDepth + 1))(q A)(q B)(q eval)(q moves)(q moveidx)((Not (qturn)))((qdepth + 1))(qBest)(q PV)("");
+            Call unmake move(moves history[List.Length(moves history)]);
+            List.DeleteItem(moves history, List.Length(moves history));
+            Call del current;
+            If (q score > qBest)
+            {
+                qBest = q score;
+                q PV = Operator.Join(Operator.Join(Operator.Join(Operator.LetterOf(q moves, (q moveidx + 1)), Operator.LetterOf(q moves, (q moveidx + 2))), Operator.Join(Operator.LetterOf(q moves, (q moveidx + 3)), Operator.LetterOf(q moves, (q moveidx + 4)))), Operator.Join(" ", q childPV));
+            }
+            If (q A < q score)
+            {
+                q A = q score;
+            }
+            If (Not ((q B < q A)))
+            {
+                Call get current flag q;
+                Call save to TT(qdepth)(((hash % TT size) + 1))(qBest)(flag)(q PV)((Not ()));
+                q score = qBest;
+                q A = qA;
+                q B = qB;
+                q moveidx = qmoveidx;
+                q moves = qmoves;
+                q eval = qeval;
+                qBest = qBest;
+                q childPV = q PV;
+                q PV = qPV;
+                hash = qHash;
+                Stop(this script);
+            }
+            If (break? == 1)
+            {
+                Stop(this script);
+            }
+            q moveidx += 5;
+        }
+    }
+    Else
+    {
+        qBest = "infinity";
+        Repeat (List.Length(moves))
+        {
+            nodes += 1;
+            Call add current;
+            Call make_move_int(Operator.Join(Operator.LetterOf(q moves, (q moveidx + 1)), Operator.LetterOf(q moves, (q moveidx + 2))))(Operator.Join(Operator.LetterOf(q moves, (q moveidx + 3)), Operator.LetterOf(q moves, (q moveidx + 4))));
+            List.Add(moves history, move);
+            Call Qsearch((qoffDepth + 1))(q A)(q B)(q eval)(q moves)(q moveidx)((Not (qturn)))((qdepth + 1))(qBest)(q PV)("");
+            Call unmake move(moves history[List.Length(moves history)]);
+            List.DeleteItem(moves history, List.Length(moves history));
+            Call del current;
+            If (q score < qBest)
+            {
+                qBest = q score;
+                q PV = Operator.Join(Operator.Join(Operator.Join(Operator.LetterOf(q moves, (q moveidx + 1)), Operator.LetterOf(q moves, (q moveidx + 2))), Operator.Join(Operator.LetterOf(q moves, (q moveidx + 3)), Operator.LetterOf(q moves, (q moveidx + 4)))), Operator.Join(" ", q childPV));
+            }
+            If (q B > q score)
+            {
+                q B = q score;
+            }
+            If (Not ((q B < q A)))
+            {
+                Call get current flag q;
+                Call save to TT(qdepth)(((hash % TT size) + 1))(qBest)(flag)(q PV)((Not ()));
+                q score = qBest;
+                q A = qA;
+                q B = qB;
+                q moveidx = qmoveidx;
+                q moves = qmoves;
+                q eval = qeval;
+                qBest = qBest;
+                q childPV = q PV;
+                q PV = qPV;
+                hash = qHash;
+                Stop(this script);
+            }
+            If (break? == 1)
+            {
+                Stop(this script);
+            }
+            q moveidx += 5;
+        }
+    }
+    Call get current flag q;
+    Call save to TT(qdepth)(((hash % TT size) + 1))(qBest)(flag)(q PV)((Not ()));
+    q score = qBest;
+    q A = qA;
+    q B = qB;
+    q moveidx = qmoveidx;
+    q moves = qmoves;
+    q eval = qeval;
+    qBest = qBest;
+    q childPV = q PV;
+    q PV = qPV;
+    hash = qHash;
+}
+
+Define QuickSortImpl(string Lo)(string Hi) (warp=true)
+{
+    QSPivot = CalcMovesScoreList[floor(((Lo + Hi) / 2))];
+    QSLower = Lo;
+    QSUpper = Hi;
+    Repeat Until (QSLower > QSUpper)
+    {
+        Repeat Until (Not ((CalcMovesScoreList[QSLower] < QSPivot)))
+        {
+            QSLower += 1;
+        }
+        Repeat Until (Not ((CalcMovesScoreList[QSUpper] > QSPivot)))
+        {
+            QSUpper += -1;
+        }
+        If (Not ((QSLower > QSUpper)))
+        {
+            QSSwap = CalcMovesScoreList[QSLower];
+            List.ReplaceItem(CalcMovesScoreList, QSLower, CalcMovesScoreList[QSUpper]);
+            List.ReplaceItem(CalcMovesScoreList, QSUpper, QSSwap);
+            QSSwap = moves[QSLower];
+            List.ReplaceItem(moves, QSLower, moves[QSUpper]);
+            List.ReplaceItem(moves, QSUpper, QSSwap);
+            QSLower += 1;
+            QSUpper += -1;
+        }
+    }
+    If (Lo < QSUpper)
+    {
+        List.Add(QSPartStack, QSLower);
+        Call QuickSortImpl(Lo)(QSUpper);
+        QSLower = QSPartStack[List.Length(QSPartStack)];
+        List.DeleteItem(QSPartStack, List.Length(QSPartStack));
+    }
+    If (QSLower < Hi)
+    {
+        Call QuickSortImpl(QSLower)(Hi);
+    }
+}
+
+Define save to TT(string depth)(string hash)(string value)(string FLAG)(string PV)(bool qsearch?) (warp=true)
+{
+    If (TT.board[hash] == "")
+    {
+        List.ReplaceItem(TT.board, hash, Operator.Join(Operator.Join(turn, virtual board), Operator.Join(Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 8)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 64))))), Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 1)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 57))))))));
+        List.ReplaceItem(TT.depth, hash, depth);
+        List.ReplaceItem(TT.flag, hash, FLAG);
+        List.ReplaceItem(TT.value, hash, value);
+        List.ReplaceItem(TT.PV, hash, PV);
+        List.ReplaceItem(TT.infos, hash, qsearch?);
+        Used entries += 1;
+    }
+    Else
+    {
+        If ((Not (qsearch?)) And (TT.infos[hash] == "true"))
+        {
+            List.ReplaceItem(TT.board, hash, Operator.Join(Operator.Join(turn, virtual board), Operator.Join(Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 8)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 64))))), Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 1)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 57))))))));
+            List.ReplaceItem(TT.depth, hash, depth);
+            List.ReplaceItem(TT.flag, hash, FLAG);
+            List.ReplaceItem(TT.value, hash, value);
+            List.ReplaceItem(TT.PV, hash, PV);
+            List.ReplaceItem(TT.infos, hash, qsearch?);
+            Used entries += 1;
+        }
+        Else
+        {
+            If (Not ((TT.depth[hash] > depth)))
+            {
+                List.ReplaceItem(TT.board, hash, Operator.Join(Operator.Join(turn, virtual board), Operator.Join(Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 8)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 64))))), Operator.Join((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 1)))), (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 57))))))));
+                List.ReplaceItem(TT.depth, hash, depth);
+                List.ReplaceItem(TT.flag, hash, FLAG);
+                List.ReplaceItem(TT.value, hash, value);
+                List.ReplaceItem(TT.PV, hash, PV);
+                List.ReplaceItem(TT.infos, hash, qsearch?);
+                Overwritings += 1;
+            }
+        }
+    }
+}
+
+Define smooth tables(string value) (warp=true)
+{
+    List.DeleteAll(vals_smootheds);
+    Repeat (6)
+    {
+        List.Add(vals_smootheds, ((vals_mg[(List.Length(vals_smootheds) + 1)] * (1 - value)) + (vals_eg[(List.Length(vals_smootheds) + 1)] * value)));
+    }
+    List.DeleteAll(tmp);
+    i = 0;
+    Repeat (List.Length(eg_vals_PST))
+    {
+        i += 1;
+        List.Add(tmp, (((mg_vals_PST[i] * (1 - value)) + (eg_vals_PST[i] * value)) + vals_smootheds[ceiling((i / 64))]));
+    }
+    List.DeleteAll(tables);
+    i = 0;
+    Repeat (6)
+    {
+        Repeat (64)
+        {
+            i += 1;
+            List.Add(tables, tmp[i]);
+        }
+        i += -64;
+        Repeat (64)
+        {
+            i += 1;
+            List.Add(tables, ( - tmp[(pointers[(((i - 1) % 64) + 1)] + ((ceiling((i / 64)) - 1) * 64))]));
+        }
+    }
+}
+
+Define sort moves(bool revert?) (warp=true)
+{
+    List.DeleteAll(CalcMovesScoreList);
+    tmp9 = 0;
+    Repeat (List.Length(moves))
+    {
+        tmp11 = moves[tmp9];
+        tmp9 += 1;
+        If (virtual board[(Operator.Join(Operator.LetterOf(tmp11, 3), Operator.LetterOf(tmp11, 4)) + )] > 10)
+        {
+            If revert?
+            {
+                List.Add(CalcMovesScoreList, -999999999);
+            }
+            Else
+            {
+                List.Add(CalcMovesScoreList, 999999999);
+            }
+        }
+        Else
+        {
+            idx3 = (Operator.Join(Operator.LetterOf(tmp11, 1), Operator.LetterOf(tmp11, 2)) + );
+            idx4 = (Operator.Join(Operator.LetterOf(tmp11, 3), Operator.LetterOf(tmp11, 4)) + );
+            tmp10 = 0;
+            Call get eval PST change(idx3)(virtual board[idx3])(0);
+            tmp10 += change;
+            Call get eval PST change(idx4)(virtual board[idx4])(virtual board[idx3]);
+            tmp10 += change;
+            If revert?
+            {
+                List.Add(CalcMovesScoreList, ( - tmp10));
+            }
+            Else
+            {
+                List.Add(CalcMovesScoreList, tmp10);
+            }
+        }
+    }
+    List.DeleteAll(QSPartStack);
+    Call QuickSortImpl(1)(List.Length(CalcMovesScoreList));
+}
+
+Define unmake move(string move) (warp=true)
+{
+    List.DeleteItem(TMPtoMODIFY, List.Length(TMPtoMODIFY));
+    List.DeleteItem(TMPtoMODIFY, List.Length(TMPtoMODIFY));
+    If (turn == "w")
+    {
+        fullmoves += -1;
+    }
+    o-o b = (1 - (floor((move / 68157440000)) % 2));
+    o-o w = (1 - (floor((move / 136314880000)) % 2));
+    o-o-o b = (1 - (floor((move / 272629760000)) % 2));
+    o-o-o w = (1 - (floor((move / 545259520000)) % 2));
+    halfmoves = (floor((move / 681574400)) % 100);
+    turn = Operator.LetterOf("wb", ((turn == "w") + 1));
+    en passant = (floor((move / 10485760)) % 65);
+    tmp = ((move % 64) + 1);
+    tmp2 = ((floor((move / 64)) % 64) + 1);
+    Call add change(tmp) piece old(virtual board[tmp]) new piece(virtual board[tmp2]) spec?("");
+    List.ReplaceItem(virtual board, tmp, virtual board[tmp2]);
+    If ((floor((move / 5242880)) % 2) == 1)
+    {
+        Call add change(tmp2) piece old(virtual board[tmp2]) new piece(0) spec?("");
+        List.ReplaceItem(virtual board, tmp2, 0);
+        If (virtual board[tmp] == 1)
+        {
+            Call add change((tmp2 + 8)) piece old(virtual board[(tmp2 + 8)]) new piece(2) spec?("");
+            List.ReplaceItem(virtual board, (tmp2 + 8), 2);
+        }
+        Else
+        {
+            Call add change((tmp2 - 8)) piece old(virtual board[(tmp2 - 8)]) new piece(1) spec?("");
+            List.ReplaceItem(virtual board, (tmp2 - 8), 1);
+        }
+        Stop(this script);
+    }
+    If ((floor((move / 65536)) % 2) == 1)
+    {
+        tmp7 = ((((floor((move / 131072)) % 8) + 1) * 2) - ((virtual board[tmp2] % 2) == 0));
+        Call add change(tmp2) piece old(virtual board[tmp2]) new piece(tmp7) spec?("");
+        List.ReplaceItem(virtual board, tmp2, tmp7);
+    }
+    Else
+    {
+        Call add change(tmp2) piece old(virtual board[tmp2]) new piece(0) spec?("");
+        List.ReplaceItem(virtual board, tmp2, 0);
+    }
+    tmp3 = (floor((move / 4096)) % 16);
+    If (tmp3 > 0)
+    {
+        tmp7 = (2 - (tmp < 32));
+        Call add change(tmp) piece old(virtual board[tmp]) new piece(tmp7) spec?("");
+        List.ReplaceItem(virtual board, tmp, tmp7);
+        Stop(this script);
+    }
+    tmp3 = (floor((move / 1048576)) % 5);
+    If (tmp3 > 0)
+    {
+        If (tmp3 < 3)
+        {
+            If (tmp3 < 2)
+            {
+                Call add change(6) piece old(8) new piece(0) spec?("");
+                Call add change(8) piece old(0) new piece(8) spec?("");
+                List.ReplaceItem(virtual board, 6, 0);
+                List.ReplaceItem(virtual board, 8, 8);
+            }
+            Else
+            {
+                Call add change(62) piece old(7) new piece(0) spec?("");
+                Call add change(64) piece old(0) new piece(7) spec?("");
+                List.ReplaceItem(virtual board, 62, 0);
+                List.ReplaceItem(virtual board, 64, 7);
+            }
+        }
+        Else
+        {
+            If (tmp3 < 4)
+            {
+                Call add change(1) piece old(0) new piece(8) spec?("");
+                Call add change(4) piece old(8) new piece(0) spec?("");
+                List.ReplaceItem(virtual board, 1, 8);
+                List.ReplaceItem(virtual board, 4, 0);
+            }
+            Else
+            {
+                Call add change(57) piece old(0) new piece(7) spec?("");
+                Call add change(60) piece old(7) new piece(0) spec?("");
+                List.ReplaceItem(virtual board, 57, 7);
+                List.ReplaceItem(virtual board, 60, 0);
+            }
+        }
+    }
+}
+
+Define Update hash (fast) (warp=true)
+{
+    Repeat (List.Length(changes for hash))
+    {
+        Call get hash change(((changes for hash[1] % 64) + 1))((floor((changes for hash[1] / 64)) % 13))((floor((changes for hash[1] / 832)) % 13));
+        hash += change;
+        List.DeleteItem(changes for hash, 1);
+    }
+    hash += ( - old turn hash);
+    old turn hash = zobrist hash[((turn == "w") + 785)];
+    hash += old turn hash;
+    hash += ( - old castle hash);
+    old castle hash = zobrist hash[(((((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 8)))) * 8) + ((Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 64)))) * 4)) + (((Not ((List.ContainsItem(TMPtoMODIFY, 5) Or List.ContainsItem(TMPtoMODIFY, 1)))) * 2) + (Not ((List.ContainsItem(TMPtoMODIFY, 61) Or List.ContainsItem(TMPtoMODIFY, 57)))))) + 786)];
+    hash += old castle hash;
+}
+
+Define virtual board to position (warp=true)
+{
+    List.DeleteAll(position);
+    Repeat (64)
+    {
+        List.Add(position, pieces[virtual board[(List.Length(position) + 1)]]);
+        If (position[List.Length(position)] == "")
+        {
+            List.ReplaceItem(position, List.Length(position), 00);
+        }
+    }
+}
+
+
+//----- Orphaned blocks -----------------------------------------------------------------------------------------------
+
+Call position to virtual board;
+Call make_move_int(List.IndexOf(pointers a-8, "e2"))(List.IndexOf(pointers a-8, "e3"));
+List.Add(moves history, move);
+Call virtual board to position;
+Event.Broadcast("print");
+
+Call position to virtual board;
+Call make_move_int(List.IndexOf(pointers a-8, "b8"))(List.IndexOf(pointers a-8, "c6"));
+List.Add(moves history, move);
+Call virtual board to position;
+Event.Broadcast("print");
+
+Call position to virtual board;
+Call unmake move(moves history[List.Length(moves history)]);
+List.DeleteItem(moves history, List.Length(moves history));
+Call virtual board to position;
+Event.Broadcast("print");
+
+Call clear TT;
+
+
+//----- Costumes ------------------------------------------------------------------------------------------------------
+
+.svg
