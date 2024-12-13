@@ -7,25 +7,25 @@ beta = 22
 break? = 1
 change = 406
 childPv = 1321 6353 0722 
-curr = b8 4 6 10 12 6 4 8 2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 7 3 5 9 11 5 3 7truetruetruetrue
-data = 257
-depthIter = 5
-flag = 2
-hash = 427223808
-i = 64
-i3 = 35
+curr = 0
+data = 0
+depthIter = 0
+flag = 0
+hash = 0
+i = 0
+i3 = 0
 idx = 0
-idx2 = 46
-idx3 = 17
-idx4 = 25
-idxhash = 64
+idx2 = 0
+idx3 = 0
+idx4 = 0
+idxhash = 0
 len = 0
 len2 = 0
-line idx = 46
+line idx = 0
 LOG? = 0
-move = 43620762753
-moves = 0917 1321 0217 1422 1329 1127 1220 1228 1632 0925 1018 0722 0219 1119 0724 1026 1531 1523 1430 1624
-old castle hash = -2177571826
+move = 0
+moves = 0
+old castle hash = 0
 old overwrittings = 0
 old turn hash = 546680546
 old writing = 0
@@ -2538,30 +2538,6 @@ Define virtual board to position (warp=true)
         }
     }
 }
-
-
-//----- Orphaned blocks -----------------------------------------------------------------------------------------------
-
-Call position to virtual board;
-Call make_move_int(List.IndexOf(pointers a-8, "e2"))(List.IndexOf(pointers a-8, "e3"));
-List.Add(moves history, move);
-Call virtual board to position;
-Event.Broadcast("print");
-
-Call position to virtual board;
-Call make_move_int(List.IndexOf(pointers a-8, "b8"))(List.IndexOf(pointers a-8, "c6"));
-List.Add(moves history, move);
-Call virtual board to position;
-Event.Broadcast("print");
-
-Call position to virtual board;
-Call unmake move(moves history[List.Length(moves history)]);
-List.DeleteItem(moves history, List.Length(moves history));
-Call virtual board to position;
-Event.Broadcast("print");
-
-Call clear TT;
-
 
 //----- Costumes ------------------------------------------------------------------------------------------------------
 
